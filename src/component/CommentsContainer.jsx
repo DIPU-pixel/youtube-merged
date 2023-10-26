@@ -1,31 +1,32 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
+import { GenerateName } from "../helper/NameHelper";
 
 const commentsdata = [
   {
-    name: "Dipankar chetia",
+    name: GenerateName(),
     text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
     replies: [],
   },
   {
-    name: "Dipankar chetia",
+    name: GenerateName(),
     text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
     replies: [
       {
-        name: "Dipankar chetia",
+        name: GenerateName(),
         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
         replies: [
             {
-                name: "Dipankar chetia",
+                name: GenerateName(),
                 text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
                 replies: [
                     {
-                        name: "Dipankar chetia",
+                        name: GenerateName(),
                         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
                         replies: [],
                       },
                       {
-                        name: "Dipankar chetia",
+                        name: GenerateName(),
                         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
                         replies: [],
                       },
@@ -34,54 +35,54 @@ const commentsdata = [
         ],
       },
       {
-        name: "Dipankar chetia",
+        name: GenerateName(),
         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
         replies: [],
       },
       {
-        name: "Dipankar chetia",
+        name: GenerateName(),
         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
         replies: [],
       },
       {
-        name: "Dipankar chetia",
+        name: GenerateName(),
         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
         replies: [],
       },
       {
-        name: "Dipankar chetia",
+        name: GenerateName(),
         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
         replies: [],
       },
       {
-        name: "Dipankar chetia",
+        name: GenerateName(),
         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
         replies: [],
       },
       {
-        name: "Dipankar chetia",
+        name: GenerateName(),
         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
         replies: [],
       },
       {
-        name: "Dipankar chetia",
+        name: GenerateName(),
         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
         replies: [],
       },
       {
-        name: "Dipankar chetia",
+        name: GenerateName(),
         text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
         replies: [],
       },
     ],
   },
   {
-    name: "Dipankar chetia",
+    name: GenerateName(),
     text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
     replies: [],
   },
   {
-    name: "Dipankar chetia",
+    name: GenerateName(),
     text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
     replies: [],
   },

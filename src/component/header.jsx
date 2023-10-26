@@ -72,7 +72,7 @@ const Header = () => {
           <Search color="#747474" />
         </button>
         {showSuggesation && (
-          <div className="absolute z-10 mt-2 w-96 border border-gray-300 bg-white rounded-b-lg shadow-lg">
+          <div className="absolute top-10 z-10 mt-6 w-96 border border-gray-300 bg-white rounded-b-lg shadow-lg">
             {getQueryData?.map((getValue, index) => (
               <div
                 key={index}
