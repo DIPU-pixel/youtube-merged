@@ -5,7 +5,8 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { youtube_search_api } from "../utils/YoutubeApi";
 import { searchCache } from "../utils/slices/cacheSlice";
-import { AlignJustify, Search } from "lucide-react";
+import { AlignJustify, Moon, Search, Sun } from "lucide-react";
+import { toggleMode } from "../utils/slices/moodSlice";
 //  import Logo from "../utils/image/youtubenewlogo.png";
 const Header = () => {
   const [searchQueary, setSearchQueary] = useState("");
@@ -13,6 +14,8 @@ const Header = () => {
   const [showSuggesation, setShowSuggesation] = useState(false);
   const cacheData = useSelector((store) => store.cache);
   const dispatch = useDispatch();
+
+  const dark = useSelector((state) => state.moods.moods);
 
   const MenuOpen = () => {
     dispatch(toggleMenu());
@@ -42,7 +45,11 @@ const Header = () => {
     );
   };
   return (
-    <div className="flex justify-between items-center h-[65px]  top-0 sticky bg-white z-50 shadow-lg align-middle w-full md:px-5 px-2">
+    <div
+      className={`flex justify-between items-center h-[65px]  top-0 sticky ${
+        dark ? "darkness" : "bg-white"
+      } z-50 shadow-lg align-middle w-full md:px-5 px-2`}
+    >
       <div className="flex col-span-1 items-center h-full ">
         <AlignJustify
           onClick={MenuOpen}
@@ -50,7 +57,7 @@ const Header = () => {
         />
         <Link to="/">
           <img
-            className="h-10 mx-2"
+            className="h-10 mx-2 bg-blend-color-burn  "
             src={
               "https://t3.ftcdn.net/jpg/03/00/38/90/360_F_300389025_b5hgHpjDprTySl8loTqJRMipySb1rO0I.jpg"
             }
@@ -86,13 +93,18 @@ const Header = () => {
         )}
       </div>
 
-      <div className="col-span-1 flex">
+      <div className="col-span-1 flex items-center">
         <img
           className="h-8"
           src={"https://cdn-icons-png.flaticon.com/512/3177/3177440.png"}
           alt="profile"
         />
-        <span>🚨</span>
+        <span
+          className="px-3 cursor-pointer"
+          onClick={() => dispatch(toggleMode())}
+        >
+          {dark ? <Sun /> : <Moon />}
+        </span>
       </div>
     </div>
   );

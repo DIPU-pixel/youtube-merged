@@ -40,7 +40,7 @@ const VideoContainer = () => {
             <Link
               key={video.id}
               to={"/watch?v=" + video.id}
-              className={`w-full h-[360px] p-2 ${
+              className={`w-full  h-[360px] p-2 ${
                 isMenuOpen
                   ? "lg:w-1/3 md:w-1/2 w-full"
                   : "w-full md:w-1/2 lg:w-1/4"

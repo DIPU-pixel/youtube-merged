@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((state) => state.app.isMenuOpen);
+  const dark = useSelector((state) => state.moods.moods);
 
   if (!isMenuOpen) {
     return (
@@ -15,7 +16,10 @@ const Sidebar = () => {
             key={i}
           >
             {elm.icon}
-            <h2 className="text-xs text-black"> {elm.name} </h2>
+            <h2 className={`text-xs  ${dark ? "text-white" : "text-black"}   `}>
+              {" "}
+              {elm.name}{" "}
+            </h2>
           </div>
         ))}
       </aside>

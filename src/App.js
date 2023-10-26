@@ -5,6 +5,7 @@ import Body from "./component/Body";
 import { Router, RouterProvider, createBrowserRouter } from "react-router-dom";
 import MainContainer from "./component/MainContainer";
 import WatchPage from "./component/WatchPage";
+import { useSelector } from "react-redux";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -22,8 +23,9 @@ const appRouter = createBrowserRouter([
   },
 ]);
 const App = () => {
+  const dark = useSelector((state) => state.moods.moods);
   return (
-    <div>
+    <div className={`${dark ? "darkness" : "bg-white"}`}>
       {/* <Header /> */}
       <RouterProvider router={appRouter} />
     </div>
