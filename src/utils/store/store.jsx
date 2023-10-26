@@ -3,13 +3,28 @@ import appSlice from "../slices/appSlice";
 import cacheSlice from "../slices/cacheSlice";
 import chatSlices from "../slices/chatSlices";
 import moodSlice from "../slices/moodSlice";
+import storage from "redux-persist/lib/storage";
+import { persistReducer, persistStore } from "redux-persist";
 
-const store = configureStore({
+const persistConfig = {
+  key: "root",
+  storage,
+};
+
+const persistedReducer = persistReducer(
+  persistConfig,
+  moodSlice
+);
+
+export const store = configureStore({
   reducer: {
     app: appSlice,
     cache: cacheSlice,
     chat: chatSlices,
-    moods: moodSlice,
+    moods: persistedReducer,
   },
 });
-export default store;
+
+
+
+export const persistor = persistStore(store);

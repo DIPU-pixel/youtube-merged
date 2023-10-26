@@ -7,7 +7,7 @@ const VideoCard = ({ videos }) => {
   return (
     <div className="p-3 shadow-lg  w-full h-full  ">
       <img
-        className="rounded-lg max-h-[200px]"
+        className="rounded-lg w-full max-h-[200px]"
         alt="image"
         src={thumbnails?.medium?.url}
       />
